@@ -2,12 +2,11 @@ import express from 'express';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import cors from 'cors';
-import {createServer} from 'http';
-import {Server} from 'socket.io';
-
+import { createServer } from 'http';
+import { Server } from 'socket.io';
 import * as middlewares from './middlewares';
 import MessageResponse from './interfaces/MessageResponse';
-import {ClientToServerEvents, ServerToClientEvents} from './interfaces/ISocket';
+import { ClientToServerEvents, ServerToClientEvents } from './interfaces/ISocket';
 
 require('dotenv').config();
 
