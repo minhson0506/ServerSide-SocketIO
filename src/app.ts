@@ -32,10 +32,8 @@ io.on('connection', (socket) => {
 
   socket.on('update', (message) => {
     console.log(message);
-    if (message === 'animal') {
-      socket.broadcast.emit('addAnimal', 'animal added');
-    } else if (message === 'species') {
-      socket.broadcast.emit('addSpecies', 'species added');
+    if (message === 'updateFeed') {
+      socket.broadcast.emit('updateFeed', 'picture or comment changed');
     }
   });
 });
